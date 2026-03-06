@@ -1,8 +1,8 @@
 {
     "scripts": {
-        "dev": "mix --mix-config=node_modules/@mapas/scripts/webpack.mix.js",
-        "build": "mix --mix-config=node_modules/@mapas/scripts/webpack.mix.js --production",
-        "watch": "mix watch --mix-config=node_modules/@mapas/scripts/webpack.mix.js"
+        "dev": "mkdir -p assets/css assets/js && ../../node_scripts/node_modules/.bin/sass assets-src/sass/home.scss assets/css/home.css && ../../node_scripts/node_modules/.bin/esbuild assets-src/js/home.js --bundle --format=iife --platform=browser --target=es2019 --sourcemap --outfile=assets/js/home.js",
+        "build": "mkdir -p assets/css assets/js && ../../node_scripts/node_modules/.bin/sass assets-src/sass/home.scss assets/css/home.css --style=compressed --no-source-map && ../../node_scripts/node_modules/.bin/esbuild assets-src/js/home.js --bundle --format=iife --platform=browser --target=es2019 --minify --outfile=assets/js/home.js",
+        "watch": "mkdir -p assets/css assets/js && ../../node_scripts/node_modules/.bin/sass --watch assets-src/sass/home.scss:assets/css/home.css --style=expanded"
     },
     "devDependencies": {
         "@mapas/scripts": "workspace:*"
@@ -10,7 +10,11 @@
     "mapas": {
         "assets": {
             "css": {
-                "main": "main"
+                "main": "theme-BaseV2",
+                "home": "home"
+            },
+            "js": {
+                "home": "home"
             }
         }
     }
