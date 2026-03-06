@@ -14,6 +14,7 @@
         <link rel="profile" href="//gmpg.org/xfn/11" />
         <link rel="icon" href="<?= $this->asset($app->config['favicon.svg'], false) ?>" type="image/svg+xml">
         <link rel="apple-touch-icon" href="<?= $this->asset($app->config['favicon.180'], false) ?>">
+        <?php $this->printPwaHeadTags(); ?>
 
         <?php $this->printStyles('redemapas-home'); ?>
         <?php $this->printScripts('redemapas-home'); ?>
