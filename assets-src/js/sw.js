@@ -24,9 +24,12 @@ self.addEventListener('push', function (event) {
 
 self.addEventListener('notificationclick', function (event) {
     event.notification.close();
-    var targetUrl = (event.notification.data && event.notification.data.url)
-        ? event.notification.data.url
-        : '/painel';
+    var targetUrl = new URL(
+        (event.notification.data && event.notification.data.url)
+            ? event.notification.data.url
+            : '/painel',
+        self.location.origin
+    ).href;
 
     event.waitUntil(
         clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (windowClients) {
