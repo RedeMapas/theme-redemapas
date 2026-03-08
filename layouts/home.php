@@ -22,5 +22,17 @@
 
     <body <?php $this->bodyProperties() ?>>
         <?= $TEMPLATE_CONTENT ?>
+
+        <!-- Botão instalar PWA — visível apenas quando beforeinstallprompt disparar -->
+        <button type="button" data-redemapas-install hidden style="display:none">
+            <?= i18n('Instalar aplicativo') ?>
+        </button>
+
+        <!-- Botão ativar notificações — apenas para usuários logados -->
+        <?php if (!$app->user->is('guest')): ?>
+        <button type="button" data-redemapas-push>
+            <?= i18n('Ativar notificações') ?>
+        </button>
+        <?php endif; ?>
     </body>
 </html>
