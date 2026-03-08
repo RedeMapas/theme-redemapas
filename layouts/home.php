@@ -23,16 +23,15 @@
     <body <?php $this->bodyProperties() ?>>
         <?= $TEMPLATE_CONTENT ?>
 
-        <!-- Botão instalar PWA — visível apenas quando beforeinstallprompt disparar -->
-        <button type="button" data-redemapas-install hidden style="display:none">
-            <?= \MapasCulturais\i::__('Instalar aplicativo') ?>
-        </button>
-
-        <!-- Botão ativar notificações — apenas para usuários logados -->
-        <?php if (!$app->user->is('guest')): ?>
-        <button type="button" data-redemapas-push>
-            <?= \MapasCulturais\i::__('Ativar notificações') ?>
-        </button>
-        <?php endif; ?>
+        <div class="redemapas-pwa-launcher">
+            <button type="button" data-redemapas-install hidden style="display:none">
+                <?= \MapasCulturais\i::__('Instalar aplicativo') ?>
+            </button>
+            <?php if (!$app->user->is('guest')): ?>
+            <button type="button" data-redemapas-push>
+                <?= \MapasCulturais\i::__('Ativar notificações') ?>
+            </button>
+            <?php endif; ?>
+        </div>
     </body>
 </html>
