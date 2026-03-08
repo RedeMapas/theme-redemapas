@@ -28,7 +28,7 @@ class Push extends Controller
         $updated = SubscriptionStore::upsert($current, $subscription, (string) $app->request->getUserAgent());
 
         $app->disableAccessControl();
-        $app->user->setMetadata(self::USER_METADATA_KEY, $updated);
+        $app->user->setMetadata(self::USER_METADATA_KEY, json_encode($updated));
         $app->user->save(true);
         $app->enableAccessControl();
 
@@ -51,7 +51,7 @@ class Push extends Controller
         $updated = SubscriptionStore::removeByEndpoint($current, $endpoint);
 
         $app->disableAccessControl();
-        $app->user->setMetadata(self::USER_METADATA_KEY, $updated);
+        $app->user->setMetadata(self::USER_METADATA_KEY, json_encode($updated));
         $app->user->save(true);
         $app->enableAccessControl();
 
@@ -78,7 +78,9 @@ class Push extends Controller
 
     public static function normalizeSubscriptions(mixed $value): array
     {
-        if (is_object($value)) {
+        if (is_string($value)) {
+            $value = json_decode($value, true);
+        } elseif (is_object($value)) {
             $value = json_decode(json_encode($value), true);
         }
 
