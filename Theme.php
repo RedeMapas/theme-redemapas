@@ -42,12 +42,12 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $app->hook('mapas.printJsObject:before', function () use ($theme) {
             $config = $theme->getPushClientConfig();
             $config['strings'] = [
-                'enable'      => i18n('Ativar notificações'),
-                'enabled'     => i18n('Notificações ativadas'),
-                'blocked'     => i18n('Notificações bloqueadas'),
-                'unsupported' => i18n('Notificações não suportadas'),
-                'unavailable' => i18n('Notificações indisponíveis'),
-                'installApp'  => i18n('Instalar aplicativo'),
+                'enable'      => \MapasCulturais\i::__('Ativar notificações'),
+                'enabled'     => \MapasCulturais\i::__('Notificações ativadas'),
+                'blocked'     => \MapasCulturais\i::__('Notificações bloqueadas'),
+                'unsupported' => \MapasCulturais\i::__('Notificações não suportadas'),
+                'unavailable' => \MapasCulturais\i::__('Notificações indisponíveis'),
+                'installApp'  => \MapasCulturais\i::__('Instalar aplicativo'),
             ];
             $this->jsObject['redemapasPush'] = $config;
         });
