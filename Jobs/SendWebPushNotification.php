@@ -122,7 +122,7 @@ class SendWebPushNotification extends JobType
             }
 
             $destination = $request->destination ?? null;
-            if (!$destination || !method_exists($destination, '__get')) {
+            if (!$destination || !method_exists($destination, 'getSingleUrl')) {
                 return $fallback;
             }
 
