@@ -73,7 +73,7 @@
         globalThis.addEventListener('beforeinstallprompt', function (event) {
             event.preventDefault();
             deferredInstallPrompt = event;
-            triggers.forEach(function (el) { el.hidden = false; });
+            triggers.forEach(function (el) { el.hidden = false; el.style.display = ''; });
         });
 
         globalThis.addEventListener('appinstalled', function () {
