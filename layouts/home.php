@@ -16,6 +16,7 @@
         <link rel="apple-touch-icon" href="<?= $this->asset($app->config['favicon.180'], false) ?>">
         <?php $this->printPwaHeadTags(); ?>
 
+        <?php $this->printJsObject(); ?>
         <?php $this->printStyles('redemapas-home'); ?>
         <?php $this->printScripts('redemapas-home'); ?>
     </head>
