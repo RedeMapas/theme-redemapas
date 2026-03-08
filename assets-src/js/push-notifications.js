@@ -42,7 +42,7 @@
     }
 
     async function ensureServiceWorker(config) {
-        if (!config || !config.enabled || !('serviceWorker' in navigator)) {
+        if (!config || !config.serviceWorkerUrl || !('serviceWorker' in navigator)) {
             return null;
         }
         try {
@@ -54,6 +54,9 @@
     }
 
     async function subscribePush(config) {
+        if (!config || !config.enabled) {
+            throw new Error('Push not enabled');
+        }
         var registration = await ensureServiceWorker(config);
         if (!registration) {
             throw new Error('Service worker registration failed');
@@ -163,6 +166,10 @@
     function init() {
         if (initialized) return;
         initialized = true;
+        var config = getConfig();
+        if (config && config.serviceWorkerUrl) {
+            ensureServiceWorker(config).catch(function (e) { console.warn('[redemapas-push]', e); });
+        }
         setupInstallTriggers();
         setupPushTriggers();
     }
