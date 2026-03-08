@@ -3,7 +3,9 @@
 namespace redemapas;
 
 use MapasCulturais\App;
+use MapasCulturais\Definitions\Metadata;
 use MapasCulturais\Entities\Notification;
+use MapasCulturais\Entities\User;
 use MapasCulturais\Themes\RedeMapas\Controllers\Push;
 use MapasCulturais\Themes\RedeMapas\Jobs\SendWebPushNotification;
 use MapasCulturais\Themes\RedeMapas\Push\PushConfigBuilder;
@@ -27,6 +29,11 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         if (!$app->getController('push')) {
             $app->registerController('push', Push::class);
         }
+
+        $app->registerMetadata(
+            new Metadata(Push::USER_METADATA_KEY, ['label' => 'Web Push Subscriptions', 'type' => 'json', 'private' => true]),
+            User::class
+        );
 
         $app->hook('view.render(site/index):before', function () {
             $this->enqueueStyle('redemapas-home', 'redemapas-home-css', 'css/home.css');
