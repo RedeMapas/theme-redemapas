@@ -15,7 +15,7 @@ use Minishlink\WebPush\WebPush;
 
 class SendWebPushNotification extends JobType
 {
-    public const SLUG = 'redemapas.send_webpush_notification';
+    public const SLUG = 'redemapas.send_webpush';
 
     protected function _generateId(array $data, string $start_string, string $interval_string, int $iterations): string
     {

@@ -4,7 +4,7 @@
   if (bell) {
     var mapas = globalThis.Mapas || null;
     var baseURL = (mapas && mapas.baseURL) ? mapas.baseURL : '/';
-    fetch(baseURL + 'api/notification/find?@count=1&status=1', {
+    fetch(baseURL + 'api/notification/find?@count=1&status=EQ(1)', {
       credentials: 'same-origin',
       headers: { 'X-Requested-With': 'XMLHttpRequest' }
     })

@@ -60,20 +60,10 @@ class Push extends Controller
 
     public function GET_serviceWorker(): void
     {
+        // Service worker is now served as static file at /sw.js
+        // This method is kept for backward compatibility
         $app = App::i();
-        $swPath = __DIR__ . '/../assets/js/sw.js';
-
-        if (!is_file($swPath)) {
-            $app->halt(404, 'Service worker not found');
-            return;
-        }
-
-        $app->response = $app->response
-            ->withHeader('Content-Type', 'application/javascript; charset=utf-8')
-            ->withHeader('Service-Worker-Allowed', '/')
-            ->withHeader('Cache-Control', 'no-cache');
-
-        $app->halt(200, file_get_contents($swPath));
+        $app->halt(404, 'Service worker not available via controller');
     }
 
     public static function normalizeSubscriptions(mixed $value): array

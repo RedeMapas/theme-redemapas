@@ -29,6 +29,11 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
                 <div class="hero__logos">
                     <img src="<?= htmlspecialchars($heroLogos, ENT_QUOTES, 'UTF-8') ?>" alt="Logos institucionais">
                 </div>
+                <?php if (!$app->user->is('guest')): ?>
+                <a class="btn btn--panel" href="<?= $app->createUrl('panel', 'index') ?>">
+                    <?= \MapasCulturais\i::__('Acessar painel') ?>
+                </a>
+                <?php endif; ?>
             </div>
             <div class="hero__art" role="img" aria-label="Grafismo colorido">
                 <img src="<?= htmlspecialchars($heroBanner, ENT_QUOTES, 'UTF-8') ?>" alt="Banner grafico">

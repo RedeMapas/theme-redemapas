@@ -30,6 +30,14 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             $app->registerController('push', Push::class);
         }
 
+        // Copy service worker to public directory on theme init
+        $swSource = __DIR__ . '/assets/js/sw.js';
+        $swDest = '/var/www/html/sw.js';
+        if (is_file($swSource) && (!is_file($swDest) || filemtime($swSource) > filemtime($swDest))) {
+            copy($swSource, $swDest);
+            chmod($swDest, 0644);
+        }
+
         $app->registerMetadata(
             new Metadata(Push::USER_METADATA_KEY, ['label' => 'Web Push Subscriptions', 'type' => 'json', 'private' => true]),
             User::class
@@ -163,7 +171,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             publicKey: (string) ($app->config['redemapas.push.vapid.publicKey'] ?? ''),
             subscribeUrl: $app->createUrl('push', 'subscribe'),
             unsubscribeUrl: $app->createUrl('push', 'unsubscribe'),
-            serviceWorkerUrl: $app->createUrl('push', 'serviceWorker')
+            serviceWorkerUrl: '/sw.js'
         );
     }
 
