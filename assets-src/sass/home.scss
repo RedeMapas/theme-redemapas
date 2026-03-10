@@ -128,11 +128,11 @@ body.redemapas-home {
 .redemapas-home-page .join h2,
 .redemapas-home-page .notices h2,
 .redemapas-home-page .circuits h2 {
-  margin: 0 0 0.95rem;
+  margin: 0 0 1rem;
   color: #0033a0;
-  font-size: clamp(1.15rem, 2vw, 1.8rem);
-  line-height: 1.05;
-  text-transform: uppercase;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 .redemapas-home-page .about p,
@@ -251,6 +251,13 @@ body.redemapas-home {
 .redemapas-home-page .join h2,
 .redemapas-home-page .join p {
   color: #fff;
+}
+
+.redemapas-home-page .join h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 .redemapas-home-page .notices {

@@ -24,8 +24,8 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         <div class="container hero__inner">
             <div class="hero__copy">
                 <p class="kicker">Rede Mapas</p>
-                <h1>MAPEAMENTO COLABORATIVO<br>COM TECNOLOGIA BRASILEIRA</h1>
-                <p class="hero__description">A Rede Mapas conecta governos, universidades, empresas e sociedade civil para fortalecer a gestão colaborativa de informações de políticas públicas.</p>
+                <h1>Mapeamento colaborativo<br>para políticas públicas</h1>
+                <p class="hero__description">Conectamos governos, universidades e agentes culturais para mapear e fortalecer territórios com dados abertos.</p>
                 <div class="hero__logos">
                     <img src="<?= htmlspecialchars($heroLogos, ENT_QUOTES, 'UTF-8') ?>" alt="Logos institucionais">
                 </div>
@@ -36,7 +36,7 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
                 <?php endif; ?>
             </div>
             <div class="hero__art" role="img" aria-label="Grafismo colorido">
-                <img src="<?= htmlspecialchars($heroBanner, ENT_QUOTES, 'UTF-8') ?>" alt="Banner grafico">
+                <img src="<?= htmlspecialchars($heroBanner, ENT_QUOTES, 'UTF-8') ?>" alt="Visualização de mapa cultural">
             </div>
         </div>
     </section>
