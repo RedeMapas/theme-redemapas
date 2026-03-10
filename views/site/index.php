@@ -70,7 +70,7 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
                 <h2>CONHEÇA A REDE MAPAS</h2>
                 <p>A <strong>Rede Mapas</strong> é uma comunidade voltada ao uso e evolução de soluções digitais abertas para mapeamento e gestão colaborativa de dados territoriais.</p>
                 <p>O ecossistema se estruturou em torno do <strong>Mapas Culturais</strong>, ampliando a interoperabilidade entre plataformas e fortalecendo princípios de colaboração, transparência e dados abertos.</p>
-                <a class="btn" href="#infos">Conhecer funcionalidades</a>
+                <a class="btn" href="#explorar">Conhecer funcionalidades</a>
             </div>
             <div class="about__map">
                 <img src="<?= htmlspecialchars($mapaBrasil, ENT_QUOTES, 'UTF-8') ?>" alt="Mapa do Brasil">
@@ -78,38 +78,14 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         </div>
     </section>
 
-    <section class="infos" id="infos">
+    <section class="opportunities" id="explorar">
         <div class="container">
-            <h2>O QUE VOCÊ PODE FAZER COM O MAPAS</h2>
-            <div class="entity-grid">
-                <article class="entity-card">
-                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(38, 69, 166, 0.64), rgba(38, 69, 166, 0.64)), url('<?= htmlspecialchars($agendaBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Agenda</h3></div>
-                    <div class="entity-card__body">
-                        <p>Monitore eventos e programações para leitura territorial e acompanhamento de políticas públicas.</p>
-                        <a class="entity-card__link" href="<?= $app->createUrl('search', 'events') ?>">Ver todas</a>
-                    </div>
-                </article>
-                <article class="entity-card">
-                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(214, 22, 86, 0.68), rgba(214, 22, 86, 0.68)), url('<?= htmlspecialchars($oportunidadesBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Oportunidades</h3></div>
-                    <div class="entity-card__body">
-                        <p>Gerencie editais e fluxos de inscrição com processos colaborativos e rastreáveis.</p>
-                        <a class="entity-card__link" href="<?= $app->createUrl('search', 'opportunities') ?>">Ver todas</a>
-                    </div>
-                </article>
-                <article class="entity-card">
-                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(255, 122, 0, 0.68), rgba(255, 122, 0, 0.68)), url('<?= htmlspecialchars($agentesBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Agentes</h3></div>
-                    <div class="entity-card__body">
-                        <p>Cadastre pessoas e organizações em formato padronizado para análise e integração de dados.</p>
-                        <a class="entity-card__link" href="<?= $app->createUrl('search', 'agents') ?>">Ver todos</a>
-                    </div>
-                </article>
-                <article class="entity-card">
-                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(237, 80, 16, 0.68), rgba(237, 80, 16, 0.68)), url('<?= htmlspecialchars($espacosBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Espaços</h3></div>
-                    <div class="entity-card__body">
-                        <p>Mapeie equipamentos e territórios para planejamento, monitoramento e controle social.</p>
-                        <a class="entity-card__link" href="<?= $app->createUrl('search', 'spaces') ?>">Ver todos</a>
-                    </div>
-                </article>
+            <div class="section-header">
+                <h2>Editais abertos</h2>
+                <a class="section-header__link" href="<?= $app->createUrl('search', 'opportunities') ?>">Ver todos →</a>
+            </div>
+            <div class="opportunities__grid" data-opportunities-grid>
+                <div class="opportunities__loading" aria-live="polite">Carregando editais...</div>
             </div>
         </div>
     </section>

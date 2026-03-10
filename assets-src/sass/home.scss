@@ -414,6 +414,121 @@ body.redemapas-home {
   cursor: default;
 }
 
+/* ── SECTION HEADER ────────────────────────────── */
+.redemapas-home-page .section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.redemapas-home-page .section-header__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0056c8;
+  text-decoration: none;
+}
+
+.redemapas-home-page .section-header__link:hover {
+  text-decoration: underline;
+}
+
+/* ── OPPORTUNITIES ──────────────────────────────── */
+.redemapas-home-page .opportunities {
+  background: #f2f2f2;
+  padding: 2.5rem 0;
+}
+
+.redemapas-home-page .opportunities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.redemapas-home-page .opportunities__loading,
+.redemapas-home-page .opportunities__empty {
+  grid-column: 1 / -1;
+  color: #666;
+  font-size: 0.95rem;
+  padding: 1.5rem 0;
+}
+
+.redemapas-home-page .opp-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s, transform 0.15s;
+  overflow: hidden;
+}
+
+.redemapas-home-page .opp-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+
+.redemapas-home-page .opp-card__header {
+  background: #0056c8;
+  padding: 0.6rem 1rem;
+}
+
+.redemapas-home-page .opp-card__deadline {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.redemapas-home-page .opp-card__body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.redemapas-home-page .opp-card__title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.3;
+}
+
+.redemapas-home-page .opp-card__org {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.redemapas-home-page .opp-card__desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #474747;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.redemapas-home-page .opp-card__link {
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0056c8;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #eee;
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.redemapas-home-page .opp-card__link:hover {
+  background: #f5f9ff;
+}
+
 /* ── SPLIT ─────────────────────────────────────── */
 .redemapas-home-page .split {
   display: grid;
@@ -476,6 +591,10 @@ body.redemapas-home {
 
 @media (max-width: 900px) {
   .redemapas-home-page .split {
+    grid-template-columns: 1fr;
+  }
+
+  .redemapas-home-page .opportunities__grid {
     grid-template-columns: 1fr;
   }
 

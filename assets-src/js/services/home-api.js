@@ -41,3 +41,15 @@ export async function loadHomeData() {
     stats: statsRes.status === 'fulfilled' ? statsRes.value : null,
   };
 }
+
+export async function fetchOpportunities(limit = 3) {
+    const params = new URLSearchParams({
+        'status': '1',
+        '@limit': String(limit),
+        '@order': 'registrationTo ASC',
+        '@select': 'id,name,shortDescription,registrationFrom,registrationTo,ownerEntity',
+    });
+    const res = await fetch(`/api/opportunity/find?${params}`);
+    if (!res.ok) return [];
+    return res.json();
+}
