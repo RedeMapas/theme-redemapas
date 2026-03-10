@@ -136,42 +136,32 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         </div>
     </section>
 
-    <section class="join">
-        <img class="join-deco join-deco--left" src="<?= htmlspecialchars($joinLeft, ENT_QUOTES, 'UTF-8') ?>" alt="">
-        <img class="join-deco join-deco--right" src="<?= htmlspecialchars($joinRight, ENT_QUOTES, 'UTF-8') ?>" alt="">
-        <div class="container join__inner">
-            <h2>ATIVE O MAPAS NO<br>SEU TERRITORIO</h2>
-            <p>Implante uma plataforma colaborativa, conecte dados locais a uma rede nacional e qualifique a gestão pública com software livre.</p>
-            <a class="btn btn--light" href="<?= $app->createUrl('auth', 'register') ?>">Quero participar da rede</a>
-        </div>
-    </section>
-
-    <section class="notices" id="editais">
-        <div class="container">
-            <h2>NOTÍCIAS E ATUALIZAÇÕES DA REDE</h2>
-            <div class="notices__tabs">
-                <button class="notices__tab notices__tab--active" type="button">Destaques</button>
-                <button class="notices__tab" type="button">Comunicados</button>
-            </div>
-            <ul class="notice-list">
-                <li><span class="tag">Rede</span> Ecossistema em expansão com novas instituições e serviços colaborativos</li>
-                <li><span class="tag">Dados</span> Interoperabilidade e padrões abertos para integração de plataformas</li>
-                <li><span class="tag">Gestão</span> Soluções para mapeamento, fomento, monitoramento e avaliação de políticas</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="circuits" id="circuitos">
-        <div class="container circuits__inner">
-            <div class="circuits__text">
-                <h2>SOFTWARE LIVRE, COMUNIDADE E EVOLUÇÃO CONTÍNUA</h2>
-                <p>O Mapas é desenvolvido em comunidade, com governança colaborativa, compartilhamento de conhecimento e melhoria constante das soluções digitais.</p>
+    <section class="community" id="comunidade">
+        <div class="container community__inner">
+            <div class="community__text">
+                <h2>Software livre, comunidade e evolução contínua</h2>
+                <p>O Mapas Culturais é desenvolvido em comunidade, com governança colaborativa, compartilhamento de conhecimento e melhoria constante das soluções digitais.</p>
+                <p>Faça parte do ecossistema: contribua com código, use a plataforma e ajude a mapear o território brasileiro.</p>
                 <a class="btn" href="https://rede.mapas.tec.br/" target="_blank" rel="noopener noreferrer">Conhecer a Rede Mapas</a>
             </div>
-            <div class="circuits__art">
-                <img src="<?= htmlspecialchars($circuitsImg, ENT_QUOTES, 'UTF-8') ?>" alt="Circuitos artisticos">
-                <img class="circuits__logo" src="<?= htmlspecialchars($circuitsLogo, ENT_QUOTES, 'UTF-8') ?>" alt="Rede Mapas">
+            <div class="community__art">
+                <img src="<?= htmlspecialchars($circuitsImg, ENT_QUOTES, 'UTF-8') ?>" alt="Comunidade Rede Mapas" loading="lazy">
             </div>
+        </div>
+    </section>
+
+    <section class="cta-footer">
+        <div class="container cta-footer__inner">
+            <h2>Pronto para começar?</h2>
+            <div class="cta-footer__actions">
+                <a class="btn cta-footer__btn--primary" href="<?= $app->createUrl('auth', 'register') ?>">
+                    Cadastre-se grátis
+                </a>
+                <a class="btn cta-footer__btn--secondary" href="https://rede.mapas.tec.br/" target="_blank" rel="noopener noreferrer">
+                    Fale com nossa equipe
+                </a>
+            </div>
+            <p class="cta-footer__hint">Cadastre-se para agentes culturais · Fale conosco para gestores públicos</p>
         </div>
     </section>
 </div>

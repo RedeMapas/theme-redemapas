@@ -89,8 +89,7 @@ body.redemapas-home {
 
 .redemapas-home-page .hero__logos img,
 .redemapas-home-page .hero__art img,
-.redemapas-home-page .about__map img,
-.redemapas-home-page .circuits__art img {
+.redemapas-home-page .about__map img {
   max-width: 100%;
   display: block;
 }
@@ -108,10 +107,7 @@ body.redemapas-home {
   object-position: center;
 }
 
-.redemapas-home-page .infos h2,
-.redemapas-home-page .join h2,
-.redemapas-home-page .notices h2,
-.redemapas-home-page .circuits h2 {
+.redemapas-home-page .infos h2 {
   margin: 0 0 1rem;
   color: #0033a0;
   font-size: clamp(1.3rem, 2.2vw, 2rem);
@@ -119,9 +115,6 @@ body.redemapas-home {
   font-weight: 700;
 }
 
-.redemapas-home-page .join p,
-.redemapas-home-page .circuits p,
-.redemapas-home-page .notices li,
 .redemapas-home-page .entity-card__body p {
   margin: 0 0 0.8rem;
   color: #474747;
@@ -174,133 +167,6 @@ body.redemapas-home {
 }
 
 
-.redemapas-home-page .join {
-  background: linear-gradient(135deg, #0056c8 0%, #00a76f 100%);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-
-.redemapas-home-page .join::before,
-.redemapas-home-page .join::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 42px;
-  height: 100%;
-  background: repeating-linear-gradient(180deg, #00b6b9 0, #00b6b9 24px, transparent 24px, transparent 46px);
-}
-
-.redemapas-home-page .join::before { left: 0; }
-.redemapas-home-page .join::after { right: 0; }
-
-.redemapas-home-page .join__inner {
-  text-align: center;
-  padding: 2.3rem 0;
-  max-width: 700px;
-}
-
-.redemapas-home-page .join-deco {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: auto;
-  opacity: 0.92;
-}
-
-.redemapas-home-page .join-deco--left { left: 0; }
-.redemapas-home-page .join-deco--right { right: 0; }
-
-.redemapas-home-page .join h2,
-.redemapas-home-page .join p {
-  color: #fff;
-}
-
-.redemapas-home-page .join h2 {
-  color: #fff;
-  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.redemapas-home-page .notices {
-  background: #fff;
-  padding: 2.05rem 0;
-}
-
-.redemapas-home-page .notices__tabs {
-  display: flex;
-  gap: 0.45rem;
-  margin-bottom: 0.95rem;
-}
-
-.redemapas-home-page .notices__tab {
-  border: 1px solid #d8d8d8;
-  background: #fff;
-  color: #3d3d3d;
-  border-radius: 999px;
-  padding: 0.34rem 0.78rem;
-  font-size: 0.73rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.redemapas-home-page .notices__tab--active {
-  border-color: #00a76f;
-  color: #00a76f;
-}
-
-.redemapas-home-page .notice-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.8rem;
-}
-
-.redemapas-home-page .notice-list li {
-  border-bottom: 1px solid #e4e4e4;
-  padding-bottom: 0.6rem;
-}
-
-.redemapas-home-page .tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #0056c8;
-  color: #fff;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  padding: 0.16rem 0.58rem;
-  margin-right: 0.5rem;
-}
-
-.redemapas-home-page .circuits {
-  background: #fff;
-  padding: 1.15rem 0 2.25rem;
-  border-top: 1px solid #ececec;
-}
-
-.redemapas-home-page .circuits__inner {
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 1.4rem;
-  align-items: center;
-}
-
-.redemapas-home-page .circuits__art {
-  position: relative;
-  border: 1px solid #e1e1e1;
-  background: #fff;
-}
-
-.redemapas-home-page .circuits__logo {
-  position: absolute;
-  right: 0.7rem;
-  bottom: 0.7rem;
-  width: 138px;
-}
 
 .redemapas-notifications-bell {
   position: fixed;
@@ -668,7 +534,6 @@ body.redemapas-home {
   }
 
   .redemapas-home-page .hero__inner,
-  .redemapas-home-page .circuits__inner,
   .redemapas-home-page .entity-grid {
     grid-template-columns: 1fr;
   }
@@ -697,18 +562,100 @@ body.redemapas-home {
     height: 280px;
   }
 
-  .redemapas-home-page .join::before,
-  .redemapas-home-page .join::after {
-    width: 28px;
-  }
-
-  .redemapas-home-page .join-deco {
-    width: 30px;
-  }
-
   .redemapas-home-page .gestores__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .redemapas-home-page .community__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .redemapas-home-page .community__art {
+    order: -1;
+  }
+}
+
+/* ── COMMUNITY ──────────────────────────────────── */
+.redemapas-home-page .community {
+  background: #fff;
+  padding: 2.5rem 0;
+  border-top: 1px solid #ececec;
+}
+
+.redemapas-home-page .community__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.redemapas-home-page .community__text h2 {
+  color: #0033a0;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.redemapas-home-page .community__text p {
+  color: #474747;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 0.9rem;
+}
+
+.redemapas-home-page .community__art img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ── CTA FOOTER ─────────────────────────────────── */
+.redemapas-home-page .cta-footer {
+  background: linear-gradient(135deg, #0056c8 0%, #00a76f 100%);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.redemapas-home-page .cta-footer__inner {
+  text-align: center;
+}
+
+.redemapas-home-page .cta-footer h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.redemapas-home-page .cta-footer__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.redemapas-home-page .cta-footer__btn--primary {
+  background: #fff;
+  color: #0056c8;
+}
+
+.redemapas-home-page .cta-footer__btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.7);
+}
+
+.redemapas-home-page .cta-footer__btn--secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.redemapas-home-page .cta-footer__hint {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
 }
 
 @media (max-width: 540px) {
