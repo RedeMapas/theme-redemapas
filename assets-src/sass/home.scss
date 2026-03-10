@@ -108,21 +108,6 @@ body.redemapas-home {
   object-position: center;
 }
 
-.redemapas-home-page .about {
-  background: #ececec;
-  border-top: 1px solid #dcdcdc;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-.redemapas-home-page .about__inner {
-  display: grid;
-  grid-template-columns: 1.36fr 0.64fr;
-  gap: 2.3rem;
-  align-items: center;
-  padding: 2.2rem 0;
-}
-
-.redemapas-home-page .about h2,
 .redemapas-home-page .infos h2,
 .redemapas-home-page .map h2,
 .redemapas-home-page .join h2,
@@ -135,7 +120,6 @@ body.redemapas-home {
   font-weight: 700;
 }
 
-.redemapas-home-page .about p,
 .redemapas-home-page .join p,
 .redemapas-home-page .circuits p,
 .redemapas-home-page .notices li,
@@ -414,6 +398,59 @@ body.redemapas-home {
   cursor: default;
 }
 
+/* ── GESTORES ───────────────────────────────────── */
+.redemapas-home-page .gestores {
+  background: #f0f4ff;
+  padding: 2.5rem 0;
+  border-top: 1px solid #dce6ff;
+  border-bottom: 1px solid #dce6ff;
+}
+
+.redemapas-home-page .gestores__intro {
+  margin: -0.5rem 0 2rem;
+  color: #474747;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.redemapas-home-page .gestores__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.redemapas-home-page .gestores__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.redemapas-home-page .gestores__feature-icon {
+  display: block;
+  color: #0056c8;
+  margin-bottom: 0.25rem;
+}
+
+.redemapas-home-page .gestores__feature h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0033a0;
+  line-height: 1.3;
+}
+
+.redemapas-home-page .gestores__feature p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #474747;
+  line-height: 1.5;
+}
+
+.redemapas-home-page .gestores__cta {
+  text-align: center;
+}
+
 /* ── SECTION HEADER ────────────────────────────── */
 .redemapas-home-page .section-header {
   display: flex;
@@ -599,7 +636,6 @@ body.redemapas-home {
   }
 
   .redemapas-home-page .hero__inner,
-  .redemapas-home-page .about__inner,
   .redemapas-home-page .circuits__inner,
   .redemapas-home-page .entity-grid {
     grid-template-columns: 1fr;
@@ -636,5 +672,15 @@ body.redemapas-home {
 
   .redemapas-home-page .join-deco {
     width: 30px;
+  }
+
+  .redemapas-home-page .gestores__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .redemapas-home-page .gestores__grid {
+    grid-template-columns: 1fr;
   }
 }
