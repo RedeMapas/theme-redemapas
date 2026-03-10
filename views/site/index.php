@@ -6,38 +6,21 @@
 
 $this->layout = 'home';
 
-$heroLogos = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2025/10/logo-menu-rede-mapas.png';
-$heroBanner = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2023/09/mapas2023-3.png';
-$mapaBrasil = 'https://mapas.softwarelivre.tec.br/wp-content/uploads/sites/11/2023/08/quadrado-1.png';
-$agendaBg = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2023/09/Prancheta_8_copia_8-removebg-preview.png';
-$oportunidadesBg = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2023/08/Mapas-2.png';
-$agentesBg = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2023/09/Prancheta_8_copia_7-removebg-preview.png';
-$espacosBg = 'https://mapas.softwarelivre.tec.br/wp-content/uploads/sites/11/2023/08/3.png';
-$joinLeft = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2023/09/logo-mutirao-negativo.png';
-$joinRight = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2023/09/logo-felicilab-negativo.png';
 $circuitsImg = 'https://rede.mapas.tec.br/wp-content/uploads/sites/11/2024/06/Mapas.jpg';
-$circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2023/08/Mapas-2.png';
 ?>
 
 <div class="redemapas-home-page" data-home-redemapas>
     <section class="hero">
-        <div class="container hero__inner">
-            <div class="hero__copy">
-                <p class="kicker">Rede Mapas</p>
-                <h1>Mapeamento colaborativo<br>para políticas públicas</h1>
-                <p class="hero__description">Conectamos governos, universidades e agentes culturais para mapear e fortalecer territórios com dados abertos.</p>
-                <div class="hero__logos">
-                    <img src="<?= htmlspecialchars($heroLogos, ENT_QUOTES, 'UTF-8') ?>" alt="Logos institucionais">
-                </div>
-                <?php if (!$app->user->is('guest')): ?>
-                <a class="btn btn--panel" href="<?= $app->createUrl('panel', 'index') ?>">
-                    <?= \MapasCulturais\i::__('Acessar painel') ?>
-                </a>
-                <?php endif; ?>
-            </div>
-            <div class="hero__art" role="img" aria-label="Grafismo colorido">
-                <img src="<?= htmlspecialchars($heroBanner, ENT_QUOTES, 'UTF-8') ?>" alt="Visualização de mapa cultural">
-            </div>
+        <div class="hero__inner">
+            <p class="kicker">Rede Mapas</p>
+            <h1>Mapeamento colaborativo<br>para políticas públicas</h1>
+            <p class="hero__description">Conectamos governos, universidades e agentes culturais para mapear e fortalecer territórios com dados abertos.</p>
+            <?php if (!$app->user->is('guest')): ?>
+            <a class="btn btn--panel" href="<?= $app->createUrl('panel', 'index') ?>">
+                <?= \MapasCulturais\i::__('Acessar painel') ?>
+            </a>
+            <?php endif; ?>
+            <span class="hero__scroll-cue" aria-hidden="true">↓</span>
         </div>
     </section>
 
