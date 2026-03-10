@@ -22,6 +22,24 @@
     </head>
 
     <body <?php $this->bodyProperties() ?>>
+        <header class="site-header" data-site-header>
+            <div class="container site-header__inner">
+                <a class="site-header__logo" href="<?= $app->createUrl('site', 'index') ?>" aria-label="<?= \MapasCulturais\i::__('Rede Mapas — página inicial') ?>">
+                    <span class="site-header__logo-text">Rede Mapas</span>
+                </a>
+                <nav class="site-header__actions" aria-label="<?= \MapasCulturais\i::__('Ações do cabeçalho') ?>">
+                    <?php if (!$app->user->is('guest')): ?>
+                    <a class="site-header__btn site-header__btn--panel" href="<?= $app->createUrl('panel', 'index') ?>">
+                        <?= \MapasCulturais\i::__('Acessar painel') ?>
+                    </a>
+                    <?php else: ?>
+                    <a class="site-header__btn site-header__btn--login" href="<?= $app->createUrl('auth', 'login') ?>">
+                        <?= \MapasCulturais\i::__('Entrar') ?>
+                    </a>
+                    <?php endif; ?>
+                </nav>
+            </div>
+        </header>
         <?= $TEMPLATE_CONTENT ?>
 
         <?php if (!$app->user->is('guest')): ?>
