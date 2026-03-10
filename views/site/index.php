@@ -64,6 +64,18 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         </a>
     </section>
 
+    <section class="opportunities" id="explorar">
+        <div class="container">
+            <div class="section-header">
+                <h2>Editais abertos</h2>
+                <a class="section-header__link" href="<?= $app->createUrl('search', 'opportunities') ?>">Ver todos →</a>
+            </div>
+            <div class="opportunities__grid" data-opportunities-grid>
+                <div class="opportunities__loading" aria-live="polite">Carregando editais...</div>
+            </div>
+        </div>
+    </section>
+
     <section class="gestores" id="gestores">
         <div class="container">
             <div class="section-header">
@@ -102,18 +114,6 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
             </div>
             <div class="gestores__cta">
                 <a class="btn btn--panel" href="<?= $app->createUrl('auth', 'register') ?>">Quero ativar no meu município</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="opportunities" id="explorar">
-        <div class="container">
-            <div class="section-header">
-                <h2>Editais abertos</h2>
-                <a class="section-header__link" href="<?= $app->createUrl('search', 'opportunities') ?>">Ver todos →</a>
-            </div>
-            <div class="opportunities__grid" data-opportunities-grid>
-                <div class="opportunities__loading" aria-live="polite">Carregando editais...</div>
             </div>
         </div>
     </section>

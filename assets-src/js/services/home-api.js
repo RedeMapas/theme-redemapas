@@ -44,7 +44,7 @@ export async function loadHomeData() {
 
 export async function fetchOpportunities(limit = 3) {
     const params = new URLSearchParams({
-        'status': '1',
+        'status': 'EQ(1)',
         '@limit': String(limit),
         '@order': 'registrationTo ASC',
         '@select': 'id,name,shortDescription,registrationFrom,registrationTo,ownerEntity',
