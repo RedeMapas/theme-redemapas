@@ -44,6 +44,14 @@ async function loadOpportunities() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // scroll shadow no header
+    const siteHeader = document.querySelector('[data-site-header]');
+    if (siteHeader) {
+        window.addEventListener('scroll', () => {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 4);
+        }, { passive: true });
+    }
+
     loadOpportunities();
 
     // Carrega contagem de notificações pendentes
