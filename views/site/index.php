@@ -41,6 +41,29 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         </div>
     </section>
 
+    <section class="split">
+        <a class="split__card split__card--cultural" href="#explorar" aria-label="Sou agente cultural — explorar conteúdo">
+            <div class="split__card-inner">
+                <span class="split__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </span>
+                <h2>Sou agente cultural</h2>
+                <p>Descubra editais abertos, espaços culturais e eventos perto de você.</p>
+                <span class="split__cta">Explorar conteúdo →</span>
+            </div>
+        </a>
+        <a class="split__card split__card--gestor" href="#gestores" aria-label="Sou gestor público — conhecer a solução">
+            <div class="split__card-inner">
+                <span class="split__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                </span>
+                <h2>Sou gestor público</h2>
+                <p>Veja como municípios usam a plataforma para gestão de políticas públicas.</p>
+                <span class="split__cta">Conhecer a solução →</span>
+            </div>
+        </a>
+    </section>
+
     <section class="about" id="sobre">
         <div class="container about__inner">
             <div class="about__text">

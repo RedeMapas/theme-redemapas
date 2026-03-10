@@ -414,7 +414,71 @@ body.redemapas-home {
   cursor: default;
 }
 
+/* ── SPLIT ─────────────────────────────────────── */
+.redemapas-home-page .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.redemapas-home-page .split__card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 2.5rem 2rem;
+  transition: filter 0.15s;
+}
+
+.redemapas-home-page .split__card:hover {
+  filter: brightness(1.07);
+}
+
+.redemapas-home-page .split__card--cultural {
+  background: #00a76f;
+}
+
+.redemapas-home-page .split__card--gestor {
+  background: #0056c8;
+}
+
+.redemapas-home-page .split__card-inner {
+  max-width: 460px;
+}
+
+.redemapas-home-page .split__icon {
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.redemapas-home-page .split__card h2 {
+  margin: 0 0 0.6rem;
+  color: #fff;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.1;
+}
+
+.redemapas-home-page .split__card p {
+  margin: 0 0 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.redemapas-home-page .split__cta {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.95);
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+}
+
 @media (max-width: 900px) {
+  .redemapas-home-page .split {
+    grid-template-columns: 1fr;
+  }
+
   .redemapas-home-page .hero__inner,
   .redemapas-home-page .about__inner,
   .redemapas-home-page .circuits__inner,
