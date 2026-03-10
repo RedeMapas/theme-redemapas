@@ -118,11 +118,21 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
         </div>
     </section>
 
-    <section class="map" id="mapa">
+    <section class="map-section" id="mapa">
         <div class="container">
-            <h2>CARTOGRAFIA COLABORATIVA DO TERRITÓRIO</h2>
-            <p class="map__description">Visualize dados georreferenciados, fortaleça a transparência e apoie decisões baseadas em evidências.</p>
-            <div class="map__frame"></div>
+            <h2>Cartografia do território brasileiro</h2>
+            <p class="map-section__description">Dados georreferenciados de agentes, espaços e eventos em todo o Brasil.</p>
+            <div class="map-section__frame">
+                <iframe
+                    src="<?= $app->createUrl('search', 'agents') ?>"
+                    title="Mapa colaborativo Rede Mapas"
+                    loading="lazy"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="map-section__footer">
+                <a class="btn" href="<?= $app->createUrl('search', 'agents') ?>">Abrir mapa completo →</a>
+            </div>
         </div>
     </section>
 

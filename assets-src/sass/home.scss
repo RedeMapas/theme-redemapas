@@ -109,7 +109,6 @@ body.redemapas-home {
 }
 
 .redemapas-home-page .infos h2,
-.redemapas-home-page .map h2,
 .redemapas-home-page .join h2,
 .redemapas-home-page .notices h2,
 .redemapas-home-page .circuits h2 {
@@ -123,8 +122,7 @@ body.redemapas-home {
 .redemapas-home-page .join p,
 .redemapas-home-page .circuits p,
 .redemapas-home-page .notices li,
-.redemapas-home-page .entity-card__body p,
-.redemapas-home-page .map__description {
+.redemapas-home-page .entity-card__body p {
   margin: 0 0 0.8rem;
   color: #474747;
   line-height: 1.5;
@@ -175,24 +173,6 @@ body.redemapas-home {
   text-transform: uppercase;
 }
 
-.redemapas-home-page .map {
-  background: #efefef;
-  padding: 1.85rem 0 2.05rem;
-}
-
-.redemapas-home-page .map__description {
-  margin-top: -0.2rem;
-  max-width: 720px;
-}
-
-.redemapas-home-page .map__frame {
-  border: 1px solid #c9d3d8;
-  background:
-    linear-gradient(0deg, rgba(35, 112, 95, 0.06), rgba(35, 112, 95, 0.06)),
-    repeating-linear-gradient(0deg, #dce8dc 0, #dce8dc 24px, #e9f2e9 24px, #e9f2e9 48px),
-    repeating-linear-gradient(90deg, #d6e4d6 0, #d6e4d6 24px, #e8f2e8 24px, #e8f2e8 48px);
-  height: 295px;
-}
 
 .redemapas-home-page .join {
   background: linear-gradient(135deg, #0056c8 0%, #00a76f 100%);
@@ -451,6 +431,58 @@ body.redemapas-home {
   text-align: center;
 }
 
+/* ── MAP SECTION ────────────────────────────────── */
+.redemapas-home-page .map-section {
+  background: #0a1628;
+  padding: 2.5rem 0;
+  color: #fff;
+}
+
+.redemapas-home-page .map-section h2 {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.redemapas-home-page .map-section__description {
+  margin: 0 0 1.5rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+.redemapas-home-page .map-section__frame {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  height: 400px;
+}
+
+.redemapas-home-page .map-section__frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.redemapas-home-page .map-section__footer {
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+.redemapas-home-page .map-section .btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.redemapas-home-page .map-section .btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
 /* ── SECTION HEADER ────────────────────────────── */
 .redemapas-home-page .section-header {
   display: flex;
@@ -661,8 +693,8 @@ body.redemapas-home {
     font-size: 1.35rem;
   }
 
-  .redemapas-home-page .map__frame {
-    height: 220px;
+  .redemapas-home-page .map-section__frame {
+    height: 280px;
   }
 
   .redemapas-home-page .join::before,
