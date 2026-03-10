@@ -24,13 +24,19 @@ body.redemapas-home {
   border: 0;
   border-radius: 999px;
   padding: 0.6rem 1.4rem;
-  background: #00a76f;
+  background: #007a52;
   color: #fff;
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   min-height: 44px;
+  transition: filter 0.15s, box-shadow 0.15s;
+}
+
+.redemapas-home-page .btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .redemapas-home-page .btn--light {
@@ -106,66 +112,6 @@ body.redemapas-home {
   object-fit: cover;
   object-position: center;
 }
-
-.redemapas-home-page .infos h2 {
-  margin: 0 0 1rem;
-  color: #0033a0;
-  font-size: clamp(1.3rem, 2.2vw, 2rem);
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.redemapas-home-page .entity-card__body p {
-  margin: 0 0 0.8rem;
-  color: #474747;
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-.redemapas-home-page .infos {
-  background: #efefef;
-  padding: 2.05rem 0;
-}
-
-.redemapas-home-page .entity-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.redemapas-home-page .entity-card {
-  border: 1px solid #ddd;
-  background: #fff;
-}
-
-.redemapas-home-page .entity-card__image {
-  min-height: 122px;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.redemapas-home-page .entity-card__image h3 {
-  margin: 0;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.65rem;
-  letter-spacing: 0.01em;
-}
-
-.redemapas-home-page .entity-card__body {
-  padding: 0.95rem;
-}
-
-.redemapas-home-page .entity-card__link {
-  color: #006ad8;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-
 
 
 .redemapas-notifications-bell {
@@ -533,8 +479,7 @@ body.redemapas-home {
     grid-template-columns: 1fr;
   }
 
-  .redemapas-home-page .hero__inner,
-  .redemapas-home-page .entity-grid {
+  .redemapas-home-page .hero__inner {
     grid-template-columns: 1fr;
   }
 
@@ -548,14 +493,6 @@ body.redemapas-home {
 
   .redemapas-home-page .hero__art {
     min-height: 190px;
-  }
-
-  .redemapas-home-page .entity-card__image {
-    min-height: 100px;
-  }
-
-  .redemapas-home-page .entity-card__image h3 {
-    font-size: 1.35rem;
   }
 
   .redemapas-home-page .map-section__frame {
