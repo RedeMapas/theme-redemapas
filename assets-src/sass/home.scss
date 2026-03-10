@@ -23,13 +23,14 @@ body.redemapas-home {
   justify-content: center;
   border: 0;
   border-radius: 999px;
-  padding: 0.48rem 1rem;
+  padding: 0.6rem 1.4rem;
   background: #00a76f;
   color: #fff;
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  min-height: 44px;
 }
 
 .redemapas-home-page .btn--light {
@@ -69,7 +70,7 @@ body.redemapas-home {
 .redemapas-home-page .hero h1 {
   margin: 0;
   font-size: clamp(2rem, 3.6vw, 3.35rem);
-  line-height: 0.93;
+  line-height: 1.05;
   letter-spacing: 0.01em;
 }
 
@@ -77,8 +78,8 @@ body.redemapas-home {
   margin: 1rem 0 0;
   max-width: 420px;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.95rem;
-  line-height: 1.35;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .redemapas-home-page .hero__logos {
@@ -142,8 +143,8 @@ body.redemapas-home {
 .redemapas-home-page .map__description {
   margin: 0 0 0.8rem;
   color: #474747;
-  line-height: 1.4;
-  font-size: 0.93rem;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .redemapas-home-page .infos {
