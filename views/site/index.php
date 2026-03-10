@@ -81,9 +81,9 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
                     </div>
                 </article>
                 <article class="entity-card">
-                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(237, 80, 16, 0.68), rgba(237, 80, 16, 0.68)), url('<?= htmlspecialchars($espacosBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Espacos</h3></div>
+                    <div class="entity-card__image" style="background-image: linear-gradient(90deg, rgba(237, 80, 16, 0.68), rgba(237, 80, 16, 0.68)), url('<?= htmlspecialchars($espacosBg, ENT_QUOTES, 'UTF-8') ?>')"><h3>Espaços</h3></div>
                     <div class="entity-card__body">
-                        <p>Mapeie equipamentos e territorios para planejamento, monitoramento e controle social.</p>
+                        <p>Mapeie equipamentos e territórios para planejamento, monitoramento e controle social.</p>
                         <a class="entity-card__link" href="<?= $app->createUrl('search', 'spaces') ?>">Ver todos</a>
                     </div>
                 </article>
@@ -93,7 +93,7 @@ $circuitsLogo = 'https://mapa.softwarelivre.tec.br/wp-content/uploads/sites/11/2
 
     <section class="map" id="mapa">
         <div class="container">
-            <h2>CARTOGRAFIA COLABORATIVA DO TERRITORIO</h2>
+            <h2>CARTOGRAFIA COLABORATIVA DO TERRITÓRIO</h2>
             <p class="map__description">Visualize dados georreferenciados, fortaleça a transparência e apoie decisões baseadas em evidências.</p>
             <div class="map__frame"></div>
         </div>
